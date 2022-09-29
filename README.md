@@ -1,14 +1,12 @@
-# CICD-GiT-Maven-Jenkins-Docker
 >>>#!/bin/bash
 >>>yum install docker -y
 >>>service docker start
 
->>>useradd dockerramesh
->>>passwd dockerramesh      (add new pass ex.: ramesh123)
+>>>useradd ramesh
+>>>passwd ramesh      (add new pass ex.: ramesh123)
 
->>>usermod -aG docker dockerramesh
+>>>usermod -aG docker ramesh
 >>>mkdir /opt/docker
->>>chown -R dockerramesh:dockerramesh /opt/docker
 
 
 >>>vi Dockerfile
@@ -77,6 +75,9 @@ Root POM = pom.xml
 Goals and options = ""
 
 =====================================================
+
+*** in server setting write below command for sudo for image***
+>>>chown -R ramesh:ramesh /opt/docker
 
 Save and build now 
 
