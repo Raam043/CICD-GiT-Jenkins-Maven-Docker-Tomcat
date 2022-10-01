@@ -6,7 +6,7 @@
 >>>passwd ramesh      (add new pass ex.: ramesh123)
 
 >>>usermod -aG docker ramesh
->>>mkdir /opt/docker
+>>>mkdir /opt/dockerusermod
 
 
 >>>vi Dockerfile
@@ -59,16 +59,16 @@ Sourche file = webapp/target/*.war
 Remove prefix = webapp/target/
 Remote directory = //opt//docker
 Exec command = 
-docker stop docker_demo;
-docker rm -f docker_demo;
-docker image rm -f docker_demo;
+docker stop docker_ramesh;
+docker rm -f docker_ramesh;
+docker image rm -f docker_ramesh;
 cd /opt/docker;
-docker build -t docker_demo .
+docker build -t docker_ramesh .
 
 --------------------------------
 add one more SSH server
 Server = Docker
-Exec command = docker run -d --name docker_demo -p 8090:8080 docker_demo
+Exec command = docker run -d --name docker_ramesh -p 8090:8080 docker_ramesh
 
 *********BUILD*********************
 Root POM = pom.xml
@@ -82,3 +82,6 @@ Goals and options = ""
 Save and build now 
 
 For result please open new tab paste "Docker_Public_IP>:8090/webapp"
+
+=================All the best >>> Ramesh NB
+
